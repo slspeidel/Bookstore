@@ -2,6 +2,7 @@
 from __future__ import unicode_literals
 
 from django.shortcuts import render
+from .models import Book
 
 # Create your views here.
 def index(request):
@@ -14,5 +15,9 @@ def store(request):
     """
     second view
     """
-    return render(request, 'store.html')
+    count = Book.objects.all().count()
+    context = {
+        'count': count,
+    }
+    return render(request, 'store.html', context)
 
