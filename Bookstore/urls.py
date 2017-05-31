@@ -16,7 +16,6 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 import store
-import registration
 
 # from store.views import index, store
 
@@ -25,7 +24,6 @@ import registration
 # noinspection PyUnresolvedReferences
 urlpatterns = [
     url(r'^store/', include(store), name='store'),
-    url(r'^accounts/', include(registration.backends.default.urls)),
     url(r'^admin/', admin.site.urls),
 ]
 

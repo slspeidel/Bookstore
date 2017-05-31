@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
     'store',
 ]
 
@@ -120,6 +121,3 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-# Registration
-ACCOUNT_ACTIVATION_DAYS= 7
-REGISTRATION_AUTO_LOGIN= True
