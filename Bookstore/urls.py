@@ -23,7 +23,7 @@ import store
 
 # noinspection PyUnresolvedReferences
 urlpatterns = [
-    url(r'^store/', include(store), name='store'),
+    url(r'^store/', include('store.urls'), name='store'),
     url(r'^admin/', admin.site.urls),
 ]
 
