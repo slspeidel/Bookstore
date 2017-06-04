@@ -15,11 +15,6 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
-import store
-
-# from store.views import index, store
-
-
 
 # noinspection PyUnresolvedReferences
 urlpatterns = [
