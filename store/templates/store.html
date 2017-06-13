@@ -2,10 +2,48 @@
 <html>
     <head lang="en">
         <meta charset="UTF-8">
+        <meta name="viewport" content = "width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
         <title></title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.5.4/react.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.5.4/react-dom.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.2/browser.min.js"></script>        
     </head>
     <body>
-        <h1>Welcome to the Mystery Book store!</h1>
-        <h2>There are {{ count }} books in stock.</h2>
+        <div id="app"></div>
+        <script type="text/babel">
+            var Welcome = React.createClass({
+                getInitialState: function() {
+                    return {
+                        name: ''
+                    }
+                },
+                getDefaultProps: function() {
+                    return {
+                        name: 'Steve'
+                    }
+                },
+                render: function() {
+                    return (
+                        <div className="container">
+                            <h1>Mystery Book Store</h1>
+                            <p className="lead">
+                                Welcome to the store, {this.props.name}!
+                            </p>
+                            <p>
+                                There are {{ count }} books in stock.
+                            </p>
+                        </div>
+                    )
+                }
+            });
+
+            ReactDOM.render(
+                <Welcome />,
+                document.getElementById('app')
+            );
+        </script>
+        
+        
     </body>
 </html>
